@@ -24,6 +24,7 @@ pdf2svg-windows-GUI is a Python-based graphical tool that allows users to batch 
    - pdf2svg.exe and all dependencies are included (no separate installation required)
    - It is recommended to use the packaged convertPDF2SVG.exe
 2. **How to Run**:
+   - Ensure both `pdf2svg.exe` and `convertPDF2SVG.exe` are in the same directory
    - Double-click `convertPDF2SVG.exe`
 
 ## How to Use
@@ -67,7 +68,7 @@ convertPDF2SVG/
 - If conversion fails, please check the detailed error information in the log area.
 
 ## Screenshot Preview
-(Add GUI screenshots here)
+![Main UI](screenshots/main_ui.png)
 
 ## License
-This project is licensed under the GNU License. Contributions and feedback are welcome.
+This project is licensed under the MIT License. Contributions and feedback are welcome.

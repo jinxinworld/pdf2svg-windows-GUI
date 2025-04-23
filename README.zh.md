@@ -47,6 +47,7 @@ convertPDF2SVG/
    - 已集成 pdf2svg.exe 及所需依赖（无需单独安装）
    - 推荐使用已打包的 convertPDF2SVG.exe
 2. **运行方法**：
+   - 确保 `pdf2svg.exe` 和 `convertPDF2SVG.exe` 位于同一目录下
    - 双击 `convertPDF2SVG.exe` 
 
 ## 界面使用说明
@@ -64,7 +65,7 @@ convertPDF2SVG/
 - 若遇到转换失败，请查看日志区域的详细错误信息。
 
 ## 截图预览
-（可在此处添加界面截图）
+![界面截图](screenshots/main_ui_cn.png)
 
 ## 开源协议
-本项目遵循 GNU 协议，欢迎二次开发与反馈建议。
+本项目遵循 MIT 协议，欢迎二次开发与反馈建议。
