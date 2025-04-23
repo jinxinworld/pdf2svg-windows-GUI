@@ -1,1 +1,32 @@
-/.project
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.spec
+
+# Distribution / packaging
+.Python
+env/
+build/
+dist/
+*.egg-info/
+*.egg
+*.whl
+
+# Windows executables
+*.pdb
+*.msi
+*.bat
+*.pkg
+*.toc
+*.zip
+*.html
+*.log
+
+# Local config
+config.json
+warn-*.txt
+
+# Others
+localpycs/

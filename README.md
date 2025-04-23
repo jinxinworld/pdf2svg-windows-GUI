@@ -1,15 +1,73 @@
-# pdf2svg-windows
-Compilation of pdf2SVG for windows
+# pdf2svg-windows-GUI
 
-This repository provides windows version of pdf2svg tools provided in https://github.com/db9052/pdf2svg.
+[中文说明 (Chinese README)](README.zh.md)
 
-This version is compiled as described in http://www.cityinthesky.co.uk/opensource/pdf2svg/.
+## Project Overview
+pdf2svg-windows-GUI is a Python-based graphical tool that allows users to batch convert PDF files to SVG vector images easily on Windows. Compared to the original pdf2svg.exe command-line tool, this project supports multilingual filenames (including Chinese) and provides a bilingual interface (English/Chinese), greatly improving usability and compatibility.
 
-The platform used to do the cross compilation in a vanilla fedora 22 beta version to have latest version of poppler and cairo librairies. Version build from released version will be coming soon.
+## Main Features
+- **Graphical User Interface**: No command-line knowledge required, all operations can be completed through an intuitive window interface.
+- **Batch Conversion**: Select multiple PDF files at once and convert them to SVG in batch.
+- **Multilingual Filename Support**: Automatically handles non-ASCII filenames (such as Chinese), avoiding issues with the original tool.
+- **Bilingual Interface**: Easily switch between English and Chinese interfaces to suit different user groups.
+- **Custom Output Path**: Specify the output directory for SVG files.
+- **Real-time Conversion Log**: Built-in log area displays conversion progress and errors in real time.
 
-To cross compile for Windows under Linux, simply install the relevant cross-compiler packages (for Fedora this is mingw32-cairo and mingw32-poppler and their dependencies) and then replace “./configure” in the compilation instructions above with “mingw32-configure” or “mingw64-configure”.
+## Improvements Over Original pdf2svg.exe
+- The original pdf2svg.exe only supports command-line operation and does not support non-ASCII filenames, making it inconvenient to use.
+- This project wraps pdf2svg.exe, automatically handles filename encoding, and supports multiple languages.
+- Provides a modern and user-friendly GUI suitable for all users.
 
-Note : This build is provided AS IS and JALIOS SA will not do any support about that. 
+## Installation & Running
+1. **Requirements**:
+   - Windows 10/11
+   - pdf2svg.exe and all dependencies are included (no separate installation required)
+   - It is recommended to use the packaged convertPDF2SVG.exe
+2. **How to Run**:
+   - Double-click `convertPDF2SVG.exe`
 
+## How to Use
+1. **Select Output Path**:
+   - Click the "Select Output Path" button to specify the folder where SVG files will be saved.
+2. **Select PDF Files**:
+   - Click the "Select and Convert PDF Files" button. In the file selection dialog, hold Ctrl to select multiple PDF files.
+3. **Start Conversion**:
+   - Conversion starts automatically after selecting files. Progress and logs are displayed in the "Conversion Log" area below.
+4. **Switch Interface Language**:
+   - Use the button in the upper right corner to switch between English and Chinese interfaces.
 
-Despite our efforts to recompile this program, it is still unstable (crashing with some files). We finally solved the problem by using a bash script (available at https://community.jalios.com/pdf2svg ) that iterates (each page) on "pdftocairo.exe" (from http://blog.alivate.com.au/poppler-windows/ ).
+## Project Structure
+
+```markdown
+convertPDF2SVG/
+├── README.md                  # English documentation
+├── README.zh.md               # Chinese documentation
+├── .gitignore                 # Git ignore rules
+├── config.json                # User configuration
+├── release/                   # Release directory
+│   ├── PDFToSVGConverter.exe  # Main executable
+│   └── pdf2svg.exe            # Core converter
+└── source/                    # Source code directory
+    ├── build/                 # PyInstaller build files
+    ├── dist/                  # PyInstaller output
+    ├── convertPDF2SVG.py      # Main application code
+    ├── create_icon.py         # Icon generator
+    ├── pdf2svg.exe            # Core converter 
+    ├── iconv.dll              # Character encoding
+    ├── libbz2-1.dll           # Compression library
+    ├── libcairo-2.dll         # Vector graphics
+    ├── libfreetype-6.dll      # Font rendering
+    ├── libjpeg-62.dll         # JPEG processing
+    ├── libpng16-16.dll        # PNG processing
+    └── ...                    # Other dependencies
+```
+
+## Notes
+- The output directory must have write permissions.
+- If conversion fails, please check the detailed error information in the log area.
+
+## Screenshot Preview
+(Add GUI screenshots here)
+
+## License
+This project is licensed under the MIT License. Contributions and feedback are welcome.
