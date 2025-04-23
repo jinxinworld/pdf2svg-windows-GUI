@@ -71,4 +71,4 @@ convertPDF2SVG/
 ![Main UI](screenshots/main_ui.png)
 
 ## License
-This project is licensed under the MIT License. Contributions and feedback are welcome.
+This project is licensed under the GPL License. Contributions and feedback are welcome.

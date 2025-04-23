@@ -68,4 +68,4 @@ convertPDF2SVG/
 ![界面截图](screenshots/main_ui_cn.png)
 
 ## 开源协议
-本项目遵循 MIT 协议，欢迎二次开发与反馈建议。
+本项目遵循 GPL 协议，欢迎二次开发与反馈建议。

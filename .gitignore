@@ -10,6 +10,7 @@ __pycache__/
 env/
 build/
 dist/
+release/
 *.egg-info/
 *.egg
 *.whl
